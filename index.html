@@ -1,55 +1,202 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-    .instagram-icon {
-        font-size: 2em;
-    }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="row">
-        
-        <div class="col-1"><h1><br></h1></div>
-    </div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <img src="https://th.bing.com/th/id/OIP.0ViP38Y-lREPD2NfWGXqdwHaFj?w=221&h=180&c=7&r=0&o=5&pid=1.7" style="width: 100%; height: auto;" class="img-fluid d-block" alt="Paisaje 1">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <img src="https://th.bing.com/th/id/OIP._pNiqQPmvuKYumg4L40PAgHaEK?pid=ImgDet&w=184&h=103&c=7" style="width: 100%; height: auto;"  class="img-fluid d-block" alt="Paisaje 2">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <img src="https://th.bing.com/th/id/OIP.fXhCJ63t6B18pUtMEglWUgHaFh?pid=ImgDet&w=184&h=137&c=7" style="width: 100%; height: auto;"   class="img-fluid d-block" alt="Paisaje 3">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <img src="https://th.bing.com/th/id/OIP.pgNSzCXxTq422qoaVfJPuwHaFP?w=264&h=187&c=7&r=0&o=5&pid=1.7" style="width: 100%; height: auto;"   class="img-fluid d-block" alt="Paisaje 4">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <img src="https://th.bing.com/th/id/OIP.LG8gtllmoI4uBXasLcZLkwHaEo?pid=ImgDet&w=184&h=115&c=7"  style="width: 100%; height: auto;"  class="img-fluid d-block" alt="Paisaje 5">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <img src="https://th.bing.com/th/id/R.555389a357413593360a52b97a14e7fb?rik=Ou%2b82zVCpXr4Gw&riu=http%3a%2f%2fwww.solofondos.com%2fwp-content%2fuploads%2f2016%2f09%2fpaisajes-para-fondo-de-pantalla-de-computadora-con-movimiento-1024x682.jpg&ehk=zOGr7GrI559ifnKHeoqQRPggHkEzRmPSlax47sabSXc%3d&risl=&pid=ImgRaw&r=0" style="width: 100%; height: auto;"   class="img-fluid d-block" alt="Paisaje 6">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <img src="https://th.bing.com/th/id/OIP.0ViP38Y-lREPD2NfWGXqdwHaFj?w=221&h=180&c=7&r=0&o=5&pid=1.7"  style="width: 100%; height: auto;"  class="img-fluid d-block" alt="Paisaje 7">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <img src="https://th.bing.com/th/id/OIP.3R2Q7BkJdRG0IhTADR8QfgHaEK?pid=ImgDet&rs=1" style="width: 100%; height: auto;"  class="img-fluid d-block" alt="Paisaje 8">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <img src="https://th.bing.com/th/id/OIP.CdRmM8iN5Y8-ewL9jk2yDwHaFj?w=210&h=180&c=7&r=0&o=5&pid=1.7"  style="width: 100%; height: auto;"  class="img-fluid d-block" alt="Paisaje 9">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fa fa-instagram"> </i>instagram</a>
+            <form class="d-flex d-grid gap-3" role="search">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Create a new post
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">create a new post</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                caption:
+                                <textarea class="form-control" id="floatingTextarea"
+                                    placeholder="add the caption of your post here"></textarea>
+                                <button type="button" class="btn btn-light"><i class="fa fa-camera"> </i></button>
+                                <button type="button" class="btn btn-light"><i class="fa fa-map-pin"> </i></button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-gear"> </i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+
+            </form>
+        </div>
+    </nav>
+
+    <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                    class="fa fa-tasks"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                    class="fa fa-square"></i></button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <div class="container">
+                <br>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="https://th.bing.com/th/id/OIP.0ViP38Y-lREPD2NfWGXqdwHaFj?w=221&h=180&c=7&r=0&o=5&pid=1.7"
+                            style="width: 100%; height: auto;" class="img-fluid d-block" alt="Paisaje 1">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="https://th.bing.com/th/id/OIP._pNiqQPmvuKYumg4L40PAgHaEK?pid=ImgDet&w=184&h=103&c=7"
+                            style="width: 100%; height: auto;" class="img-fluid d-block" alt="Paisaje 2">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="https://th.bing.com/th/id/OIP.fXhCJ63t6B18pUtMEglWUgHaFh?pid=ImgDet&w=184&h=137&c=7"
+                            style="width: 100%; height: auto;" class="img-fluid d-block" alt="Paisaje 3">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="https://th.bing.com/th/id/OIP.pgNSzCXxTq422qoaVfJPuwHaFP?w=264&h=187&c=7&r=0&o=5&pid=1.7"
+                            style="width: 100%; height: auto;" class="img-fluid d-block" alt="Paisaje 4">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="https://th.bing.com/th/id/OIP.LG8gtllmoI4uBXasLcZLkwHaEo?pid=ImgDet&w=184&h=115&c=7"
+                            style="width: 100%; height: auto;" class="img-fluid d-block" alt="Paisaje 5">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="https://th.bing.com/th/id/R.555389a357413593360a52b97a14e7fb?rik=Ou%2b82zVCpXr4Gw&riu=http%3a%2f%2fwww.solofondos.com%2fwp-content%2fuploads%2f2016%2f09%2fpaisajes-para-fondo-de-pantalla-de-computadora-con-movimiento-1024x682.jpg&ehk=zOGr7GrI559ifnKHeoqQRPggHkEzRmPSlax47sabSXc%3d&risl=&pid=ImgRaw&r=0"
+                            style="width: 100%; height: auto;" class="img-fluid d-block" alt="Paisaje 6">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="https://th.bing.com/th/id/OIP.0ViP38Y-lREPD2NfWGXqdwHaFj?w=221&h=180&c=7&r=0&o=5&pid=1.7"
+                            style="width: 100%; height: auto;" class="img-fluid d-block" alt="Paisaje 7">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="https://th.bing.com/th/id/OIP.3R2Q7BkJdRG0IhTADR8QfgHaEK?pid=ImgDet&rs=1"
+                            style="width: 100%; height: auto;" class="img-fluid d-block" alt="Paisaje 8">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="https://th.bing.com/th/id/OIP.CdRmM8iN5Y8-ewL9jk2yDwHaFj?w=210&h=180&c=7&r=0&o=5&pid=1.7"
+                            style="width: 100%; height: auto;" class="img-fluid d-block" alt="Paisaje 9">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="container border" style="width: 600px;">
+                <br />
+                <div class="post">
+                    <div class="post-header">
+                        <div class="header-content">
+                            <img class="a"
+                                src="https://th.bing.com/th/id/OIP.WQs8EFjbm69lJ9Os6yAtogHaHa?pid=ImgDet&rs=1" alt="">
+                            <h2>HTML5</h2>
+                            <h2>Rigoberto</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/200/300" style="width: 580px;" alt="">
+                    </div>
+                    <div class="icons">
+                        <div class="left-icons">
+                            <span>&#10084;</span> <!-- Corazón -->
+                            <span>&#128172;</span> <!-- Comentario -->
+                            <span>&#9992;</span> <!-- Avión de papel -->
+                        </div>
+                        <div class="right-icons">
+                            <span>&#10150;</span> <!-- Compartir -->
+                        </div>
+                    </div>
+                    <div>
+                        <p>liked by 4geeks HTML5 web and 10,000 others </p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adpiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                            nostrud exerci tation ullamcorper suscipit lobortis nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            </div><br>
+            <div class="container border" style="width: 600px;">
+                <br />
+                <div class="post">
+                    <div class="post-header">
+                        <div class="header-content">
+                            <img class="a"
+                                src="https://th.bing.com/th/id/OIP.WQs8EFjbm69lJ9Os6yAtogHaHa?pid=ImgDet&rs=1" alt="">
+                            <h2>HTML5</h2>
+                            <h2>Rigoberto</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/200/300" style="width: 580px;" alt="">
+                    </div>
+                    <div class="icons">
+                        <div class="left-icons">
+                            <span>&#10084;</span> <!-- Corazón -->
+                            <span>&#128172;</span> <!-- Comentario -->
+                            <span>&#9992;</span> <!-- Avión de papel -->
+                        </div>
+                        <div class="right-icons">
+                            <span>&#10150;</span> <!-- Compartir -->
+                        </div>
+                    </div>
+                    <div>
+                        <p>liked by 4geeks HTML5 web and 10,000 others </p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adpiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                            nostrud exerci tation ullamcorper suscipit lobortis nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
 </body>
-</html>
 
+</html>
